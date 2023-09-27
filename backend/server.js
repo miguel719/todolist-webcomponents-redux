@@ -1,7 +1,7 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const Datastore = require("nedb");
-const cors = require("cors");
+import express from "express";
+import bodyParser from "body-parser";
+import Datastore from "nedb";
+import cors from "cors";
 
 const db = new Datastore({ filename: "./tasks.db", autoload: true });
 

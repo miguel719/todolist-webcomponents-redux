@@ -1,6 +1,6 @@
 import { LitElement, html, css } from "lit";
-import "./TaskCreate.ts";
-import "./TasksList.ts";
+import "./TaskCreate";
+import "./TasksList";
 
 export class TodoList extends LitElement {
   static styles = css`

@@ -27,11 +27,12 @@ export class TasksList extends connect(store)(LitElement) {
   stateChanged(state: any) {
     const tasks = state.tasksData.tasks;
     if (tasks && tasks.length > 0) {
-      this.tasks = tasks;
+      this.tasks = [...tasks];
     }
   }
 
   async connectedCallback() {
+    console.log("connectedCallback");
     super.connectedCallback();
     await fetchTasks();
   }

@@ -3,11 +3,13 @@ import thunk from "redux-thunk";
 import { lazyReducerEnhancer } from "pwa-helpers";
 import { reducers } from "./reducers.js";
 
-window.process = {
-  env: {
-    NODE_ENV: "development",
-  },
-};
+if (!window.process) {
+  window.process = {
+    env: {
+      NODE_ENV: "development",
+    },
+  };
+}
 
 // Use the Redux DevTools Extension enhancer if it's available
 const composeEnhancers =

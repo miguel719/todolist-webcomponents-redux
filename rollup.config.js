@@ -5,7 +5,7 @@ import analyzer from "rollup-plugin-analyzer";
 
 export default {
   treeshake: true,
-  input: ["./src/componentsLit/TodoList.ts"],
+  input: ["./src/componentsFast/TodoList.ts"],
   output: {
     file: "dist/TodoList.js",
     format: "esm",
